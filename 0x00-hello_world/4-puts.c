@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-int main(void)
+/* main function */
+int main(void)/*
 {
-	/*string initialization */
+	/* string initialization */
 	char hello[] = "\"Programming is like building a multilingual puzzle\n";
 
 	puts(hello);
