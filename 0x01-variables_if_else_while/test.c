@@ -1,12 +1,16 @@
+#include <limits.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(void)
+int main()
 {
-	int n = 1001;
-	int a = n % 10;
+	char c;
 
-	printf("The last digit of %d is %d\n", n, a);
-
-return (0);
+	c = CHAR_MIN;
+	while (c != CHAR_MAX)
+	{
+		printf("%d\n", c);
+		c = c + 1;
+	}
+	exit(EXIT_SUCCESS);
 }
-
