@@ -11,16 +11,13 @@
 
 int main(void)
 {
-	putchar(48);
-	  putchar(49);
-	   putchar(50);
-	    putchar(51);
-	     putchar(52);
-	      putchar(53);
-	       putchar(54);
-	       putchar(55);
-	       putchar(56);
-	       putchar(57);
-	       putchar(10);
+	int a = 48;
+
+	while (a < 58)
+	{
+		putchar(a);
+		a++;
+	}
+	putchar(10);
 	return (0);
 }
