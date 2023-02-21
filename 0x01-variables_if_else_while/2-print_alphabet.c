@@ -10,14 +10,13 @@
 
 int main(void)
 {
-	int ch;
+	int a = 97;
 
-	ch = 65;
-
-	for  (ch = 65, ch <= 90; ch++;)
+	while (a < 123)
 	{
-		putchar(ch);
+		putchar(a);
+		a++;
 	}
-		putchar(10);
+	putchar(10);
 	return (0);
 }
