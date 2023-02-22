@@ -8,23 +8,21 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	int a = 48;
-	int b;
 
-		while (a < 58)
+	while (a < 58)
+	{
+		putchar(a);
+
+		if (a < 57)
 		{
-			putchar(a);
-
-			if (a < 57)
-			{
-				putchar(',');
-			}
-			putchar(' ');
-			a++;
+			putchar(',');
 		}
-		putchar('\n');
-		return (0);
+		putchar(' ');
+		a++;
+	}
+	putchar('\n');
+	return (0);
 }
