@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * main - Entry point
  *
@@ -11,13 +10,19 @@
 
 int main(void)
 {
-	int a = 97;
+	int b = 0;
 
-	while (a < 123)
+	while (b <= 10)
 	{
-		_putchar(a);
-		a++;
+		int a = 'a';
+
+		while (a < 'z')
+		{
+			_putchar(a);
+			a++;
+		}
+		b++;
 	}
-	_putchar('\n');
+	_putchar(10);
 	return (0);
 }
