@@ -10,9 +10,6 @@
 
 int _islower(int c)
 {
-	int lc;
-
-	lc = c;
-	_islower(lc);
-	return (lc);
+	_putchar(c);
+	return (0);
 }
