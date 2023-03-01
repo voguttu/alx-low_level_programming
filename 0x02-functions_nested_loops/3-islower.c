@@ -10,6 +10,15 @@
 
 int _islower(int c)
 {
-	_putchar(c);
+	c = ' ';
+
+	if (_islower(c))
+	{
+		_putchar(c);
+	}
+	else
+	{
+		_putchar('0');
+	}
 	return (0);
 }
