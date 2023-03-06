@@ -11,13 +11,18 @@
 
 int main(void)
 {
-	int a = 0;
+	int a;
+	int b;
 
-	while (a <= 16)
+	for (a = 0; a < 10; a++)
 	{
-		putchar(a);
-		a++;
+		b = a % 16;
+		putchar('0' + b);
 	}
-	putchar(10);
+	for (b = 'a'; b < 'g'; b++)
+	{
+		putchar(b);
+	}
+	putchar('\n');
 	return (0);
 }
