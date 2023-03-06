@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * main - Entry point
  *
@@ -10,13 +11,22 @@
 
 int main(void)
 {
-	int a = 97;
+	int a;
 
-	while (a < 123 && a != 113)
+	a = 97;
+	while (a < 123)
 	{
+		if (a == 101)
+		{
+			a++;
+		}
+		else if (a == 113)
+		{
+			a++;
+		}
 		putchar(a);
 		a++;
 	}
-	putchar(10);
+	putchar('\n');
 	return (0);
 }
