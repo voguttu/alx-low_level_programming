@@ -1,10 +1,11 @@
 #include <stdio.h>
 
 /**
-  * Main - Entry Point
+  * main - Entry point
   *
   * Description: 'Program that prints all possible
   * different combinations of three digits.'
+  *
   * The three digits must be different
   * Prints only the smallest combination of three
   *
