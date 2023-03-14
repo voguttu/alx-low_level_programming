@@ -8,7 +8,7 @@
  * @argc: First member
  * @argv: Second member
  *
- * Description: program that prints its name
+ * Description: parogram tt prints all arguments it receives
  *
  * Return: Always 0 (sucess)
  */

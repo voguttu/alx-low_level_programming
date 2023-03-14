@@ -15,11 +15,14 @@
 
 int main(int argc, char *argv[])
 {
-	int a;
+	int  b, count;
 
-	for (a = 0; a < **argv[]; a++)
+	count = -1;
+	for (b = 0; b < argc; b++)
 	{
-		printf("%d\n", a);
+		argv[b]++;
+		count++;
 	}
+	printf("%d\n", count);
 	return (0);
 }
