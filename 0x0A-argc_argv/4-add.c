@@ -9,7 +9,7 @@
   * Description: program that adds positive numbers
   *
   * @argc: argument count
-  * @argv[]: array of integers
+  * @argv: array of integers
   *
   * Return: Always 0 (success)
   * otherwise return 1 (Error)
