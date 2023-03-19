@@ -19,6 +19,7 @@ void rev_string(char *s)
 	for (a = my_sl - 1; a >= 0; a--)
 	{
 		_putchar(s[a]);
+		s[a] = s[a - 1];
 	}
 }
 /**
