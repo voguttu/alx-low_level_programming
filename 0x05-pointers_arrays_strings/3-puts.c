@@ -3,10 +3,8 @@
 /**
  * _puts - function that prints a string
  *
- * _strlen - function that counts string length
- *
  * @*str: String to be printed
- * @s: characters to be counted
+ * @s: string characters to be counted
  *
  * Return: Void
  */
@@ -25,6 +23,13 @@ void _puts(char *str)
 	}
 	_putchar('\n');
 }
+/**
+  * _strlen - function that counts string length
+  *
+  * @s: string characters to be counted
+  *
+  * Return: length
+  */
 int _strlen(char *s)
 {
 	int length = 0;
