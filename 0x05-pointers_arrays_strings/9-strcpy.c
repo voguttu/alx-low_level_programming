@@ -1,5 +1,8 @@
 #include "main.h"
 
+void _puts(char *str);
+int _strlen(char *s);
+
 /**
   * char *_strcpy - function that copies the string pointed
   *
@@ -18,11 +21,45 @@ char *_strcpy(char *dest, char *src)
 		dest[i] = src[i - 1];
 	}
 	dest = src;
-	for (i = 0; i < '\0'; i++)
-	{
-		_putchar(dest[i]);
-		dest++;
-	}
-	return (dest); 
+	_puts(dest);
+	return (dest);
+}
+/**
+ * _puts - function that prints a string
+    *
+     * @*str: String to be printed
+      * @s: string characters to be counted
+       *
+        * Return: Void
+	 */
 
+void _puts(char *str)
+{
+	        int a, my_sl;
+
+		        my_sl = _strlen(str);
+			        for (a = 0; a < my_sl; a++)
+					        {
+							                _putchar(*str);
+									                str++;
+											        }
+				        _putchar('\n');
+}
+/**
+    * _strlen - function that counts string length
+      *
+        * @s: string characters to be counted
+	  *
+	    * Return: length
+	      */
+int _strlen(char *s)
+{
+	        int length = 0;
+
+		        while (*s != '\0')
+				        {
+						                length++;
+								                s++;
+										        }
+			        return (length);
 }
