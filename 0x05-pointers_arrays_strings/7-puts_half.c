@@ -1,26 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * puts_half - function that prints the second half of a string
+ * print_array - function that prints n elements of an
+ * array of integers
  *
- * @*str: String to be printed
- * @s: string characters to be counted
+ * @a: First member
+ * @n: Second member
  *
  * Return: Void
  */
 
 int _strlen(char *s);
 
-void puts_half(char *str)
+void print_array(int *a, int n)
 {
-	int a, my_sl, n;
+	int my_sl;
 
-	my_sl = _strlen(str);
-	if (my_sl % 2 == 0)
-	{
-		for (a = (my_sl / 2); a < my_sl; a++)
+	n = 0;
+	my_sl = _strlen(a);
+	for (a = n; a < my_sl; a++)
 		{
-			_putchar(str[my_sl / 2]);
+			printf("%d, ", a[n]);
 			str++;
 		}
 	}
