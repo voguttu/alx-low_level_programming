@@ -13,14 +13,18 @@
 
 char *create_array(unsigned int size, char c)
 {
-	int a;
+	unsigned int a, n;
 	char *p;
 
-	p = malloc(sizeof(c) * size);
-
-	for (a = 0; a < '\0'; a++)
+	n = size;
+	p = malloc(n * sizeof(c));
+	if (p == NULL)
 	{
-		_putchar(p[a]);
+		return (NULL);
+	}
+	for (a = 0; a < n; a++)
+	{
+		p[a] = c;
 	}
 
 	return (p);
