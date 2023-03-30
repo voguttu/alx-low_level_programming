@@ -14,7 +14,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int a, n1;
 	char *str1;
-	
+
 	n1 = _strlen(src);
 	str1 = src;
 
