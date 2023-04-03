@@ -1,6 +1,5 @@
 #include "main.h"
 
-void _puts(char *str);
 int _strlen(char *s);
 
 /**
@@ -14,35 +13,14 @@ int _strlen(char *s);
 
 char *_strcpy(char *dest, char *src)
 {
-	int i;
-
-	for (i = 0; i <= '\0'; i++)
-	{
-		dest[i] = src[i - 1];
-	}
-	dest = src;
-	_puts(dest);
-	return (dest);
-}
-/**
- * _puts - function that prints a string
- *
- * @str: String to be printed
- *
- * Return: Void
- */
-
-void _puts(char *str)
-{
 	int a, my_sl;
 
-	my_sl = _strlen(str);
-	for (a = 0; a < my_sl; a++)
+	my_sl = _strlen(src);
+	for (a = 0; a < my_sl + 1; a++)
 	{
-		_putchar(*str);
-		str++;
+		dest[a] = src[a];
 	}
-	_putchar('\n');
+	return (dest);
 }
 /**
  * _strlen - function that counts string length
