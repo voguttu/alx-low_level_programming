@@ -21,7 +21,7 @@ void rev_string(char *s)
 		s[a] = s[a - 1];
 		if (a != '\0')
 		{
-		_putchar(s[a]);
+			_putchar(s[a]);
 		}
 	}
 }
