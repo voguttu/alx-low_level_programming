@@ -16,10 +16,13 @@ void rev_string(char *s)
 	int a, my_sl;
 
 	my_sl = _strlen(s);
-	for (a = my_sl - 1; a >= 0; a--)
+	for (a = my_sl; a >= 0; a--)
 	{
-		_putchar(s[a]);
 		s[a] = s[a - 1];
+		if (a != '\0')
+		{
+		_putchar(s[a]);
+		}
 	}
 }
 /**
