@@ -12,18 +12,16 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int result;
 	char *a;
 	char *b;
 
 	a = s1;
 	b = s2;
-	result = *a - *b;
 
 	while (*a && (*a == *b))
 	{
 		a++;
 		b++;
 	}
-	return (result);
+	return (*a - *b);
 }
