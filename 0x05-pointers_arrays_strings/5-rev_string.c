@@ -9,21 +9,18 @@
  * Return: Void
  */
 
-int _strlen(char *s);
+int _strlen(char *s); /* Calling function _strlen */
 
 void rev_string(char *s)
 {
 	int a, my_sl;
 
 	my_sl = _strlen(s);
-	for (a = my_sl; a >= 0; a--)
+	for (a = my_sl - 1; a >= 0; a--)
 	{
-		s[a] = s[a - 1];
-		if (a != '\0')
-		{
-			_putchar(s[a]);
-		}
+		_putchar(s[a]);
 	}
+	_putchar('\n');
 }
 /**
  * _strlen - function that counts string length
