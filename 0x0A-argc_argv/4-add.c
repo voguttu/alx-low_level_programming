@@ -33,18 +33,28 @@ int main(int argc, char *argv[])
 	}
 	else if (count >= 1)
 	{
-		sum = 0;
 		for (b = 1; b < argc; b++)
 		{
-			a = atoi(argv[b]);
-			sum += a;
+			char *arg = argv[b];
+			int c = 0;
+
+			while (arg[c] != '\0')
+			{
+			if (isdigit(arg[c]))
+			{
+				sum = 0;
+				a = atoi(argv[b]);
+				sum += a; 
+			}
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+			c++;
+			}
 		}
 		printf("%d\n", sum);
 	}
-	else if (count >= 1 && isdigit(a) == 0)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	return (0);
+	return (sum);
 }
