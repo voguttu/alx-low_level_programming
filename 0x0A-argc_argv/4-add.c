@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 	else if (count >= 1)
 	{
 		int a;
+
 		sum = 0;
 
 		for (b = 1; b < argc; b++)
