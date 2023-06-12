@@ -6,26 +6,19 @@
 /**
   * main - Entry point
   *
-  * Description: program that adds positive numbers
+  * Description: program that prints the minimum number of coins to make change
   *
   * @argc: argument count
-  * @argv: array of integers
+  * @argv: amount of money to make change
   *
   * Return: Always 0 (success), otherwise return 1 (Error)
   */
 
 int main(int argc, char *argv[])
 {
-	int a, b, c, d, e, i, chg, count, cents;
-	
+	int i, chg, count, cents, divz, rem;
 
-	a = 25;
-	b = 10;
-	c = 5;
-	d = 2;
-	e = 1;
 	count = 0;
-
 	for (i = 1; i < argc; i++)
 	{
 		chg = atoi(argv[i]);
@@ -41,36 +34,34 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	else
-	{
-		int divz = chg / a;
-		int rem = chg % a;
+	divz = chg / 25;
+	rem = chg % 25;
 
-		if (rem == 0)
-		{
-			cents = divz;
-			printf("%d\n", cents);
-		}
-		else if ((rem > 0) && ((rem) % b == 0))
-		{
-			cents = (divz + (rem / b));
-			printf("%d\n", cents);
-		}
-		else if (rem > 0 && ((rem % b) % c == 0))
-		{
-			cents = (divz + (rem / b) + (rem % b) / c);
-			printf("%d\n", cents);
-		}
-		else if (rem > 0 && (((rem % b) % c) % d == 0))
-		{
-			cents = (divz + (rem / b) + ((rem % b) / c) + ((rem % b) % c) / d);
-			printf("%d\n", cents);
-		}
-		else if (rem > 0 && ((((rem % b) % c) % d) % e == 0))
-		{
-			cents = (divz + (rem / b) + (rem % b) / c) + (((rem % b) % c) / d) + ((((rem % b) % c) % d) / e);
-			printf("%d\n", cents);
-		}
+	if (rem == 0)
+	{
+		cents = divz;
+		printf("%d\n", cents);
+	}
+	else if ((rem > 0) && ((rem) % 10 == 0))
+	{
+		cents = (divz + (rem / 10));
+		printf("%d\n", cents);
+	}
+	else if (rem > 0 && ((rem % 10) % 5 == 0))
+	{
+		cents = (divz + (rem / 10) + (rem % 10) / 5);
+		printf("%d\n", cents);
+	}
+	else if (rem > 0 && (((rem % 10) % 5) % 2 == 0))
+	{
+		cents = (divz + (rem / 10) + ((rem % 10) / 5) + ((rem % 10) % 5) / 2);
+		printf("%d\n", cents);
+	}
+	else if (rem > 0 && ((((rem % 10) % 5) % 2) % 1 == 0))
+	{
+		cents = (divz + rem / 10 + (rem % 10) / 5) + (((rem % 10) % 5) / 2)
+			+ ((((rem % 10) % 5) % 2) / 1);
+		printf("%d\n", cents);
 	}
 	return (0);
 }
