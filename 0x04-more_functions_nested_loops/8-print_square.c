@@ -1,5 +1,5 @@
 #include "main.h"
- 
+
 /**
  * print_square - function that prints a square
  *
@@ -10,25 +10,19 @@
 
 void print_square(int size)
 {
-	int *a;
+	int i, j;
 
-	a = &size;
-
-	while (*a <= size)
+	if (size <= 0)
 	{
-		for (*a = size; *a <= size; a++)
+		_putchar('\n');
+		return;
+	}
+	for (i = 0; i < size; i++)
+	{
+		for (j = 0; j < size; j++)
 		{
-			if (*a <= size)
-			{
-				_putchar('#');
-			}
-		/*	else if (b > 9 && b <= 14)
-			{
-				_putchar('0' + b / 10);
-				_putchar('0' + b % 10);
-			}*/
+			_putchar('#');
 		}
 		_putchar('\n');
-		a++;
 	}
 }
