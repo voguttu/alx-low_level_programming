@@ -17,10 +17,9 @@
 
 int main(int argc, char *argv[])
 {
-	int count, a, b, sum;
+	int count, b, sum;
 
 	b = 0;
-	a = atoi(argv[b]);
 	count = -1;
 
 	for (b = 0; b < argc; b++)
@@ -30,9 +29,13 @@ int main(int argc, char *argv[])
 	if (count == 0)
 	{
 		printf("0\n");
+		return (0);
 	}
 	else if (count >= 1)
 	{
+		int a;
+		sum = 0;
+
 		for (b = 1; b < argc; b++)
 		{
 			char *arg = argv[b];
@@ -40,21 +43,17 @@ int main(int argc, char *argv[])
 
 			while (arg[c] != '\0')
 			{
-			if (isdigit(arg[c]))
-			{
-				sum = 0;
-				a = atoi(argv[b]);
-				sum += a; 
+				if (!isdigit(arg[c]))
+				{
+					printf("Error\n");
+					return (1);
+				}
+				c++;
 			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-			c++;
-			}
+			a = atoi(arg);
+			sum += a;
 		}
-		printf("%d\n", sum);
 	}
-	return (sum);
+	printf("%d\n", sum);
+	return (0);
 }
