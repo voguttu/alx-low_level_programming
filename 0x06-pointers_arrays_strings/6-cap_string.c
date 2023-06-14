@@ -14,7 +14,7 @@ char *cap_string(char *str)
 {
 	int i, capital;
 
-	if (*str == 0)
+	if (*str == '\0')
 	{
 		return (0);
 	}
