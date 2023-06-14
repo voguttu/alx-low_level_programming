@@ -2,6 +2,7 @@
 
 char _upper(char c);
 int _isalpha(int c);
+int _strlen(char *s);
 /**
   * cap_string - function that capitalizes all words of a string
   *
@@ -14,7 +15,7 @@ char *cap_string(char *str)
 {
 	int i, capital;
 
-	if (*str == '\0')
+	if (_strlen(str) == 0)
 	{
 		return (0);
 	}
@@ -69,4 +70,22 @@ int _isalpha(int c)
 	{
 		return (0);
 	}
+}
+/**
+ * _strlen - function checking the length of a string
+ *
+ * @s: string to checked
+ *
+ * Return: Always 0.
+ */
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
+	return (length);
 }
