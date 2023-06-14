@@ -27,10 +27,11 @@ char *cap_string(char *str)
 			{
 				str[i] = _upper(str[i]);
 			}
-			capital = (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == ',' 
-				|| str[i] == ';' || str[i] == '.' || str[i] == '!' || str[i] == '?' 
-				|| str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{' 
-				|| str[i] == '}');
+			capital = (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+					|| str[i] == ',' || str[i] == ';' || str[i] == '.'
+					|| str[i] == '!' || str[i] == '?' || str[i] == '"'
+					|| str[i] == '(' || str[i] == ')' || str[i] == '{'
+					|| str[i] == '}');
 		}
 	}
 	return (str);
