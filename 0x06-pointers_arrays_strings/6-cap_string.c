@@ -15,7 +15,7 @@ char *cap_string(char *str)
 {
 	int i, capital;
 
-	if (_strlen(str) == 0)
+	if (str == 0)
 	{
 		return (0);
 	}
