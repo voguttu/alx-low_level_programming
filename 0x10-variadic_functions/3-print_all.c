@@ -46,13 +46,15 @@ void print_all(const char * const format, ...)
 				{
 					s_val = va_arg(args, char *);
 					if (s_val == NULL)
+					{
 						printf("(nil)");
-					if (s_val != NULL)
-						printf("%s", s_val);
+						break;
+					}
+					printf("%s", s_val);
 					break;
 				}
 		}
-		 if (format[i + 1] != '\0')
+		if (format[i + 1] != '\0')
 			 printf(", ");
 	
 		i++;
