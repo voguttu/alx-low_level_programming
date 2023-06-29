@@ -27,30 +27,33 @@ void print_all(const char * const format, ...)
 			case 'c':
 				{
 					c_val = (char)va_arg(args, int);
-					printf("%c, ", c_val);
+					printf("%c", c_val);
 					break;
 				}
 			case 'i':
 				{
 					i_val = va_arg(args, int);
-					printf("%d, ", i_val);
+					printf("%d", i_val);
 					break;
 				}
 			case 'f':
 				{
 					f_val = (float)va_arg(args, double);
-					printf("%f, ", f_val);
+					printf("%f", f_val);
 					break;
 				}
 			case 's':
 				{
 					s_val = va_arg(args, char *);
 					if (s_val == NULL)
-						printf("(nil), ");
+						printf("(nil)");
 					if (s_val != NULL)
-						printf("%s, ", s_val);
+						printf("%s", s_val);
 				}
 		}
+		 if (format[i + 1] != '\0')
+			 printf(", ");
+	
 		i++;
 	}
 	va_end(args);
