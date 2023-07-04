@@ -20,7 +20,6 @@ void print_opcodes(int num_bytes)
 	{
 		printf("%02x", addr[i]);
 	}
-	printf("\n");
 }
 /**
  * main - entry point
@@ -44,5 +43,6 @@ int main(int argc, char *argv[])
 		return (2);
 	}
 	print_opcodes(num_bytes);
+	printf("\n");
 	return (0);
 }
